@@ -4,7 +4,11 @@ This repository contains the web application frontend and backend services for *
 
 ## 🎥 Demo Video
 
-https://github.com/Sayyam-Akram/savis_web/raw/main/docs/images/r.mp4
+<p align="center">
+  <video width="60%" controls>
+    <source src="https://raw.githubusercontent.com/Sayyam-Akram/savis_web/main/docs/images/r.mp4" type="video/mp4">
+  </video>
+</p>
 
 ---
 
