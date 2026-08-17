@@ -6,7 +6,7 @@ This repository contains the web application frontend and backend services for *
 <summary><b>🎥 Demo Video</b></summary>
 <br>
 
-<video src="docs/images/r.mp4" controls width="100%"></video>
+<video src="https://github.com/Sayyam-Akram/savis_web/raw/main/docs/images/r.mp4" controls width="100%"></video>
 
 </details>
 
