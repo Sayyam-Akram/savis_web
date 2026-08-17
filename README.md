@@ -4,42 +4,52 @@ This repository contains the web application frontend and backend services for *
 
 ---
 
-## 🏗️ Project Structure
+## 🏗️ Project Layout & Dependencies
 
-The project is split into two main directories:
+The backend service in this repository depends on the core **SAVIS** modeling repository. They must be placed as sibling directories:
 
-*   **`frontend/`**: A React + Vite web application styled with TailwindCSS/CSS, using Firebase for user authentication.
-*   **`backend/`**: A Flask-based REST API service that manages user databases (SQLite), handles file uploads, and serves segmentation visualization results.
+```
+savis-project/
+├── savis/         (Core model repository, e.g. from https://github.com/Sayyam-Akram/savis)
+└── savis_web/     (Web app repository, this directory)
+```
 
 ---
 
 ## 🚀 Getting Started
 
 ### 1. Backend Setup (Flask)
-Go to the backend directory and set up the environment:
+
+The Flask backend requires PyTorch, Detectron2, and the SAVIS core environment. Ensure you have followed the installation guide in the core repository to set up the `savis` conda environment.
+
+Activate your conda environment and start the Flask backend:
 ```bash
+# Activate core SAVIS environment
+conda activate savis
+
+# Navigate to backend directory and start server
 cd backend
-python3 -m venv venv
-source venv/bin/activate
-pip install Flask flask-cors opencv-python Pillow numpy
-```
-Start the backend server:
-```bash
 python app.py
 ```
-The server will start at `http://127.0.0.1:5000/`.
+
+The backend server will launch and listen at `http://127.0.0.1:5000/`.
+
+> [!NOTE]
+> If running on a CPU-only host without a GPU or trained checkpoints, you can run in mock mode by setting the `MOCK_INFERENCE` environment variable:
+> ```bash
+> MOCK_INFERENCE=1 python app.py
+> ```
 
 ### 2. Frontend Setup (React + Vite)
-Go to the frontend directory and install dependencies:
+
+Go to the frontend directory, install dependencies, and start the development server:
 ```bash
-cd ../frontend
+cd frontend
 npm install
-```
-Start the development server:
-```bash
 npm run dev
 ```
-The application will run locally at `http://localhost:5173/`.
+
+The frontend application will run locally at `http://localhost:5173/`.
 
 ---
 

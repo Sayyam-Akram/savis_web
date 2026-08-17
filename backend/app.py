@@ -21,10 +21,14 @@ import torch
 from flask import Flask, jsonify, send_file, request
 from flask_cors import CORS
 
+# Path setup — make the SAVIS repo importable
 # ---------------------------------------------------------------------------
-# Path setup — make the AVIS repo importable
-# ---------------------------------------------------------------------------
-AVIS_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'avis'))
+PARENT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+if os.path.exists(os.path.join(PARENT_DIR, 'savis')):
+    AVIS_ROOT = os.path.join(PARENT_DIR, 'savis')
+else:
+    AVIS_ROOT = os.path.join(PARENT_DIR, 'avis')
+
 sys.path.insert(0, AVIS_ROOT)
 sys.path.insert(0, os.path.join(AVIS_ROOT, 'demo_video'))
 
