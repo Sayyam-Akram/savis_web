@@ -32,13 +32,7 @@ cd backend
 python app.py
 ```
 
-The backend server will launch and listen at `http://127.0.0.1:5000/`.
-
-> [!NOTE]
-> If running on a CPU-only host without a GPU or trained checkpoints, you can run in mock mode by setting the `MOCK_INFERENCE` environment variable:
-> ```bash
-> MOCK_INFERENCE=1 python app.py
-> ```
+The backend server will launch and listen at http://127.0.0.1:5000/. (Use `MOCK_INFERENCE=1 python app.py` to run in CPU mock mode).
 
 ### 2. Frontend Setup (React + Vite)
 
