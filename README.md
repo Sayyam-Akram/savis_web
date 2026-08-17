@@ -2,13 +2,9 @@
 
 This repository contains the web application frontend and backend services for **SAVIS (Audio-Visual Instance Segmentation)**. The application allows users to sign in, upload videos and audio, run sounding object segmentation, and view interactive visual result predictions.
 
-<details open>
-<summary><b>🎥 Demo Video</b></summary>
-<br>
+## 🎥 Demo Video
 
-https://github.com/Sayyam-Akram/savis_web/raw/main/docs/images/r.mp4
-
-</details>
+![SAVIS Demo Video](docs/images/r.mp4)
 
 ---
 
